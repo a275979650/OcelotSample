@@ -33,7 +33,10 @@ namespace ApiTwo
             {
                 host.UseUrls($"http://{ip}:{port}");
             }
-
+            //else
+            //{
+            //    host.UseUrls("http://127.0.0.1:8001");
+            //}
             return host.Build();
         }
             

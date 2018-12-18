@@ -34,6 +34,7 @@ namespace APIGatewayByOcelot
             // 所以客户端要想访问ApiOne应用中的接口，就必须带上AccessToken，然后Ocelot拿着这个AccessToken去Ids4Center验证合法性，
             // 如果验证通过就把请求转发到ApiOne应用处理
             var authenticationProviderKey = "TestKey";
+            //services.AddAuthentication("Bearer")
             services.AddAuthentication()
                 .AddIdentityServerAuthentication(authenticationProviderKey, o =>
                 {
@@ -42,6 +43,7 @@ namespace APIGatewayByOcelot
                     o.SupportedTokens = SupportedTokens.Both;
                     o.ApiSecret = "secret1";
                     o.RequireHttpsMetadata = false;
+                    o.JwtValidationClockSkew = TimeSpan.FromSeconds(0);
                 });
 
             services.AddOcelot();

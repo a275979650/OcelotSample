@@ -39,7 +39,7 @@ namespace AccessApiOne
             HttpClient httpClient = new HttpClient();
             // 使用获取到的AccessToken访问user-api资源
             httpClient.SetBearerToken(tokenResponse.AccessToken);
-            var httpResonse = await httpClient.GetAsync("https://localhost:5001/one/values");
+            var httpResonse = await httpClient.GetAsync("http://localhost:5000/one/values");
             if (httpResonse.IsSuccessStatusCode)
             {
                 var content = await httpResonse.Content.ReadAsStringAsync();

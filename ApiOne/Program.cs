@@ -32,7 +32,10 @@ namespace ApiOne
             {
                 host.UseUrls($"http://{ip}:{port}");
             }
-
+            //else
+            //{
+            //    host.UseUrls("http://127.0.0.1:8000");
+            //}
             return host;
         }
             

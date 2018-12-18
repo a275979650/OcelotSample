@@ -59,3 +59,12 @@
 4. 启动APIGatewayByOcelot网关项目，端口默认5000，SSL端口是5001。此时可以通过浏览器访问:https://localhost:5001/two/values 可以看到返回结果，
    但访问 https://localhost:5001/one/values 时并未看到任何结果，通过F12查看请求，可以看到服务端返回401（未授权），若要访问该接口，可以启动
    客户端AccessApiOne项目查看结果。
+### 使用Postman测试
+1、API无限制
+![无限制API](https://github.com/a275979650/OcelotSample/blob/5ff24f153df810d4a414ef2ce542d09e2e65b348/images/1.png)
+2、获取token
+![获取授权](https://github.com/a275979650/OcelotSample/blob/5ff24f153df810d4a414ef2ce542d09e2e65b348/images/2.png)
+3、访问被限制的API
+![被限制图](https://github.com/a275979650/OcelotSample/blob/5ff24f153df810d4a414ef2ce542d09e2e65b348/images/3.png)
+4、过期失效
+![过期](https://github.com/a275979650/OcelotSample/blob/5ff24f153df810d4a414ef2ce542d09e2e65b348/images/4.png)
